@@ -1,103 +1,232 @@
 @font-face {
-    font-family: 'GreatVibes';
-    src: url(..\public\GreatVibes-Regular.ttf) format("opentype");
+  font-family: 'GreatVibes';
+  src: url(..\public\GreatVibes-Regular.ttf) format("opentype");
 }
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url(..\public\trebuc.ttf) format("opentype");
+  font-family: 'Trebuchet MS';
+  src: url(..\public\trebuc.ttf) format("opentype");
 }
 
-
 body {
-    font-family: 'MyCustomFont', sans-serif;
+  font-family: 'MyCustomFont', sans-serif;
+  background: linear-gradient(90deg, #8f8e8de6, #ffffff);
+  background-image: url('../public/Home.png');
+  background-size: 100% 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .navHeader {
-    font-family: 'GreatVibes', cursive;
-    font-size: 30px;
-    color: rgb(16, 16, 16);
+  font-family: 'GreatVibes', cursive;
+  font-size: 30px;
+  color: rgb(16, 16, 16);
+  text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.637); 
 }
 
 .nav {
-    position: fixed;
-    top: 0;
-    left: -200px;
-    width: 200px;
-    height: 100%;
-    background: linear-gradient(90deg, #a6a6a6, #ffffff);
-    color: rgb(16, 14, 14);
-    transition: left 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav.open {
-    left: 0;
-  }
-  
-  .nav.open::after {
-    content: '';
-    position: absolute;
-    top: 75px;
-    bottom: 75px;
-    right: 0;
-    width: 2px;
-    background-color: black;
-  }
-  
-  .nav-toggle {
-    position: absolute;
-    top: 10px;
-    right: -50px;
-    background-color: transparent;
-    color: rgb(14, 10, 10);
-    border: 3px solid rgb(16, 14, 14);
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px; 
-    font-weight: bold; 
-  }
-  .nav ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .nav ul li {
-    /* padding: 10px; */
-    text-align: center;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, #a6a6a6, #ffffff);
+  color: rgb(16, 14, 14);
+  transition: left 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav.open {
+  left: 0;
+}
+
+.nav.open::after {
+  content: '';
+  position: absolute;
+  top: 75px;
+  bottom: 75px;
+  right: 0;
+  width: 2px;
+  /* background-color: black; */
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  background-color: transparent;
+  color: rgb(14, 10, 10);
+  border: 3px solid rgb(16, 14, 14);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.nav ul li {
+  text-align: center;
+}
+
 .nav ul li p {
-    color: rgb(16, 16, 16);
-    text-decoration: none;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    transition: transform 0.3s, text-decoration-color 0.3s;
+  color: rgb(16, 16, 16);
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  transition: transform 0.3s, text-decoration-color 0.3s;
+}
+
+.nav ul li p:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.content {
+  transition: margin-left 0.3s;
+}
+
+.content.shifted {
+  margin-left: 200px;
+}
+
+.navBarImage {
+  width: 120px;
+  border-radius: 40%;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.home-container {
+  /* background-image: url('../public/Home.png'); */
+  /* background-size: 100% 100%; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(21, 5, 5);
+}
+
+.home-content {
+  text-align: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-page-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+svg:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
   }
-  
-  .nav ul li p:hover {
-    text-decoration: underline;
-    text-decoration-color: red;
-    transform: scale(1.2); 
-    cursor: pointer;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .content {
-    transition: margin-left 0.3s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  .content.shifted {
-    margin-left: 200px;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .navBarImage {
-    width: 120px;
-    height: 150px;
-    border-radius: 60%;
-    margin-top: 20px;
-    border: 3px solid black;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-styling {
+  font-family: 'GreatVibes', cursive;
+  font-size: 65px;
+  color: rgb(16, 16, 16);
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.637); 
+  font-weight: lighter;
+  animation: slideDown 1s ease-out;
+}
+
+.name-styling {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 100px;
+  color: rgb(16, 16, 16);
+  margin: 0 auto;
+  text-shadow: 3px 3px 5px;
+  animation: slideInLeft 1s ease-out;
+}
+
+.title-styling {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 35px;
+  color: rgb(16, 16, 16);
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px;
+  font-weight: lighter;
+  animation: slideInRight 1s ease-out;
+}
+
+.body-styling {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: rgb(7, 7, 7);
+  background-color: #d5cfcf7a;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.625);
+  padding: 10px;
+  animation: fadeIn 4s ease-out;
+}
