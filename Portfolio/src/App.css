@@ -309,6 +309,7 @@ svg:hover {
   width: 80%;
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 12px;
+  text-align: center;
   color: rgb(7, 7, 7);
   background-color: #d5cfcf;
   margin: 0 auto;
@@ -325,4 +326,51 @@ svg:hover {
   border: 1px solid black;
   animation: fadeIn 2s ease-out 1;
   box-shadow: 5px 5px 5px rgba(19, 20, 19, 0.6);
+}
+
+.mentoring-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.mentoring-header-styling {
+  font-family: 'GreatVibes', cursive;
+  font-size: 55px;
+  color: rgb(16, 16, 16);
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.637); 
+  font-weight: lighter;
+  animation: slideDown 1s ease-out;
+}
+
+.mentoring-image {
+ display: flex;
+ gap: 30px;
+}
+
+.mentoring-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  border: 1px solid black;
+  animation: fadeIn 2s ease-out 1;
+  box-shadow: 5px 5px 5px rgba(19, 20, 19, 0.6);
+}
+
+.mentoring-body-styling {
+  width: 60%;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(7, 7, 7);
+  background-color: #d5cfcf;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.625);
+  padding: 10px;
+  animation: fadeIn 2s ease-out 1;
 }
