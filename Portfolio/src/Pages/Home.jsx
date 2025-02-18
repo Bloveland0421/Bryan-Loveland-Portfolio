@@ -1,13 +1,21 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const Home = () => {
+    useEffect(() => {
+        document.body.style.backgroundImage = "url('../public/Home.png')";
+        document.body.style.backgroundSize = "100% 100%";
+        document.body.style.backgroundPosition = "center";
+        return () => {
+            document.body.style.backgroundImage = ""; 
+        };
+    }, []);
+
     const navigateToLinkedIn = () => {
-        window.location.href = 'https://https://www.linkedin.com/in/bryan-loveland-33643a34b/';
+        window.location.href = 'https://www.linkedin.com';
     };
 
     const navigateToGitHub = () => {
-        window.location.href = 'https://github.com/Bloveland0421';
+        window.location.href = 'https://www.github.com';
     };
 
     return (
@@ -46,8 +54,7 @@ const Home = () => {
                     </svg>
                 </div>
             </div>
-        </div> 
-    
+        </div>
     );
 }
 
