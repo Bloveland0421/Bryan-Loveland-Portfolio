@@ -286,7 +286,7 @@ svg:hover {
   gap: 20px;
 }
 
-.experience-header-styling{
+.experience-header-styling, .leadership-header-styling{
   font-family: 'GreatVibes', cursive;
   font-size: 55px;
   color: rgb(16, 16, 16);
@@ -361,7 +361,7 @@ svg:hover {
   box-shadow: 5px 5px 5px rgba(19, 20, 19, 0.6);
 }
 
-.mentoring-body-styling {
+.mentoring-body-styling, .leadership-body-styling {
   width: 60%;
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 14px;
@@ -373,4 +373,32 @@ svg:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.625);
   padding: 10px;
   animation: fadeIn 2s ease-out 1;
+}
+
+.leadership-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.leadership-content {
+  text-align: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.leadership-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 30%;
+  border: 1px solid black;
+  animation: fadeIn 2s ease-out 1;
+  box-shadow: 5px 5px 5px rgba(19, 20, 19, 0.6);
 }
