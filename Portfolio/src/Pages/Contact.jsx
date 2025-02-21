@@ -24,9 +24,8 @@ const Contact = () => {
             <img className='contact-image' src="public/Bryan Logo 4.png" alt="" />
             <div className='contact-content'>
                  <h1 className='contact-header-styling'>Get In Touch</h1>
-            <h4 className='contact-name-styling'>Bryan Loveland</h4>
-            <p className='contact-body-styling'>(856) 343-5359</p>
-            <p className='contact-body-styling'>Lovelandbryan486@gmail.com</p>
+            <p className='contact-body-styling'>Cell: (856) 343-5359</p>
+            <p className='contact-body-styling'>Email: Lovelandbryan486@gmail.com</p>
            
             <div className='home-page-icons'>
                     <svg
