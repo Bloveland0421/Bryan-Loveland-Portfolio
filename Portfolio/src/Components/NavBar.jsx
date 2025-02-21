@@ -18,7 +18,7 @@ const NavBar = ({ isOpen, toggleNav }) => {
         <li><NavLink to='/leadership' onClick={toggleNav}><p>Leadership</p></NavLink></li>
         <li><NavLink to='/contact' onClick={toggleNav}><p>Contact</p></NavLink></li>
       </ul>
-      <img className='navBarImage' src="/public/unnamed.jpg" alt="Profile" />
+      <img className='navBarImage' src="public/Bryan Logo 4.png" alt="Profile" />
     </div>
   );
 };
